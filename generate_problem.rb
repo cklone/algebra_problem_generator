@@ -30,3 +30,46 @@ y = z - x
 
 puts "Problem: #{variable} + #{y} = #{z}"
 puts "Answer:  #{variable} = #{x}"
+
+# Can we change the program so that the answer isn't always 4?
+# What is the minimum and maximum number you want for x?
+# => -25 to 25
+x = (-25..25).to_a.sample
+# Can we keep the code above the same for z and y?
+# => Yes, let's check
+z = (0..25).to_a.sample
+# How do we calculate what y should be, given that x = 4 and z = random #
+y = z - x
+
+puts "Problem: #{variable} + #{y} = #{z}"
+puts "Answer:  #{variable} = #{x}"
+
+# How do we exclude or include specific letters to be the variable (so we don't get 'o' or 'z')
+variable = ['x', 'y', 'z', 'v'].sample
+x = (-25..25).to_a.sample
+# Can we keep the code above the same for z and y?
+# => Yes, let's check
+z = (0..25).to_a.sample
+# How do we calculate what y should be, given that x = 4 and z = random #
+y = z - x
+
+puts "Problem: #{variable} + #{y} = #{z}"
+puts "Answer:  #{variable} = #{x}"
+
+# How can we change the program so that we use a minus sign instead of "X + -1 = 2"
+variable = ['x', 'y', 'z', 'v'].sample
+x = (-25..25).to_a.sample
+# Can we keep the code above the same for z and y?
+# => Yes, let's check
+z = (0..25).to_a.sample
+# How do we calculate what y should be, given that x = 4 and z = random #
+y = z - x
+
+sign = if y.negative?
+         "-"
+       else
+         "+"
+       end
+
+puts "Problem: #{variable} #{sign} #{y.abs} = #{z}"
+puts "Answer:  #{variable} = #{x}"
